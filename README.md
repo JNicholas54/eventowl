@@ -24,8 +24,8 @@ The app is still under construction.
 
 ## Links
 
-- [Live site URL](https://elenauj.github.io/EventScout/)
-- [Code URL](https://github.com/ElenaUJ/EventScout)
+- [Live site URL](https://JNicholas54.github.io/eventowl/)
+- [Code URL](https://github.com/JNicholas54/eventowl)
 
 ## Process
 
