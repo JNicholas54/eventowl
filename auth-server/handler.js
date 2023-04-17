@@ -1,6 +1,6 @@
 const { google } = require("googleapis");
-const OAuth2 = google.auth.OAuth2;
 const calendar = google.calendar("v3");
+const OAuth2 = google.auth.OAuth2;
 
 const SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
 
@@ -130,3 +130,8 @@ module.exports.getCalendarEvents = async (event) => {
       };
     });
 };
+
+/* ENDPOINT URLS 
+auth GET - https://hwwgr6188f.execute-api.us-west-1.amazonaws.com/dev/api/get-auth-url 
+token GET - https://hwwgr6188f.execute-api.us-west-1.amazonaws.com/dev/api/token/{code}
+calendar GET - https://hwwgr6188f.execute-api.us-west-1.amazonaws.com/dev/api/get-events/{access_token} */
