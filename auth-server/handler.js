@@ -130,8 +130,3 @@ module.exports.getCalendarEvents = async (event) => {
       };
     });
 };
-
-/* ENDPOINT URLS 
-auth GET - https://hwwgr6188f.execute-api.us-west-1.amazonaws.com/dev/api/get-auth-url 
-token GET - https://hwwgr6188f.execute-api.us-west-1.amazonaws.com/dev/api/token/{code}
-calendar GET - https://hwwgr6188f.execute-api.us-west-1.amazonaws.com/dev/api/get-events/{access_token} */
