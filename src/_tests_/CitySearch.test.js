@@ -5,9 +5,10 @@ import { mockData } from '../mock-data';
 import { extractLocations } from '../api';
 
 describe('<CitySearch /> component', () => {
-    let CitySearchWrapper;
+    let locations, CitySearchWrapper;
     beforeAll(() => {
-        CitySearchWrapper = shallow(<CitySearch />);
+        locations = extractLocations(mockData);
+        CitySearchWrapper = shallow(<CitySearch locations={locations} />);
     });
 
   test('render text input', () => {
@@ -42,4 +43,16 @@ describe('<CitySearch /> component', () => {
     }
   });
 
+  test('suggestion list match the query when changed', () => {
+    CitySearchWrapper.setState({ query: '', suggestions: [] });
+    CitySearchWrapper.find(".city").simulate("change", {
+      target: { value: "Berlin" },
+    });
+    const query = CitySearchWrapper.state("query");
+    const filteredLocations = locations.filter((location) => {
+      return location.toUpperCase().indexOf(query.toUpperCase()) > -1;
+    });
+    expect(CitySearchWrapper.state("suggestions")).toEqual(filteredLocations);
+  });
+  
 });
