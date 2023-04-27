@@ -25,7 +25,7 @@ describe('<App /> component', () => { // shallow scope (unit testing)
 describe('<App /> integration', () => { //full scope (integration testing)
     let AppWrapper;
     beforeAll(() => {
-      AppWrapper.mount(<App />);
+      AppWrapper = mount(<App />);
     });
     afterAll(() => {
       AppWrapper.unmount();
