@@ -28,8 +28,11 @@ describe('<App /> integration', () => { //full scope (integration testing)
       AppWrapper = mount(<App />);
     });
     afterAll(() => {
-      AppWrapper.unmount();
+      if (AppWrapper && AppWrapper.length > 0) {
+        AppWrapper.unmount();
+      }
     });
+    
 
     test('App passes "events" state as a prop to EventList', () => {
         const AppWrapper = mount(<App />);
@@ -72,6 +75,7 @@ describe('<App /> integration', () => { //full scope (integration testing)
       });
       
       test("events state changes number of events changes", () => {
+        const AppWrapper = mount(<App />);
         const eventCount = AppWrapper.state("eventCount");
         expect(eventCount).toEqual(AppWrapper.find(NumberOfEvents).props().query);
         AppWrapper.unmount();
