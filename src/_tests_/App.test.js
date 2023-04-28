@@ -66,12 +66,12 @@ describe('<App /> integration', () => { //full scope (integration testing)
         expect(AppWrapper.state("events")).toEqual(shownEvents);
       });
       
-      test('get list of all events when user selects "See all cities"', async () => {
+      test('get list of all events when user selects "See all cities"', async () => { 
         const suggestionItems = AppWrapper.find(CitySearch).find(".suggestions li");
         await suggestionItems.at(suggestionItems.length - 1).simulate("click");
         const allEvents = await getEvents();
         const shownEvents = allEvents.slice(0, 32);
-        expect(AppWrapper.state("events")).toEqual(shownEvents);
+        expect(AppWrapper.state("events")).toEqual(shownEvents); // This line is throwing error
       });
       
       test("events state changes number of events changes", () => {
