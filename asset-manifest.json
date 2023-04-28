@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/eventowl/static/css/main.073c9b0a.css",
-    "main.js": "/eventowl/static/js/main.0a045ff0.js",
+    "main.css": "/eventowl/static/css/main.1f6e645d.css",
+    "main.js": "/eventowl/static/js/main.727993a2.js",
     "static/js/787.7919904a.chunk.js": "/eventowl/static/js/787.7919904a.chunk.js",
     "service-worker.js": "/eventowl/service-worker.js",
-    "static/media/logo.svg": "/eventowl/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
     "index.html": "/eventowl/index.html",
-    "main.073c9b0a.css.map": "/eventowl/static/css/main.073c9b0a.css.map",
-    "main.0a045ff0.js.map": "/eventowl/static/js/main.0a045ff0.js.map",
+    "main.1f6e645d.css.map": "/eventowl/static/css/main.1f6e645d.css.map",
+    "main.727993a2.js.map": "/eventowl/static/js/main.727993a2.js.map",
     "787.7919904a.chunk.js.map": "/eventowl/static/js/787.7919904a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.0a045ff0.js"
+    "static/css/main.1f6e645d.css",
+    "static/js/main.727993a2.js"
   ]
 }
