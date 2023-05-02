@@ -7,6 +7,7 @@ import CitySearch from "../CitySearch";
 import { extractLocations } from "../api";
 
 const feature = loadFeature('./src/features/filterEventsByCity.feature');
+const locations = extractLocations(mockData);
 
 defineFeature(feature, test => {
     test('When user has not searched for a city, show upcoming events from all cities.', ({ given, when, then }) => {
@@ -22,7 +23,7 @@ defineFeature(feature, test => {
     
         then('the user should see the list of upcoming events.', () => {
             AppWrapper.update();
-            expect(AppWrapper.find('.event')).toHaveLength(mockData.length); //need to figure out why this is giving me an
+            expect(AppWrapper.find('.event')).toHaveLength(mockData.length);
         });
     });
   
@@ -30,7 +31,7 @@ defineFeature(feature, test => {
         let CitySearchWrapper;
         let locations = extractLocations(mockData);
       given('the main page is open', () => {
-           CitySearchWrapper = shallow(<CitySearch updateEvents={() => {}}  locations={locations} />)
+           CitySearchWrapper = shallow(<CitySearch locations={locations} updateEvents={() => {}} />)
       });
   
       when('the user starts typing in the city textbox', () => {
