@@ -7,9 +7,9 @@ import CitySearch from "../CitySearch";
 import { extractLocations } from "../api";
 
 const feature = loadFeature('./src/features/filterEventsByCity.feature');
-const locations = extractLocations(mockData);
 
 defineFeature(feature, test => {
+    
     test('When user has not searched for a city, show upcoming events from all cities.', ({ given, when, then }) => {
         given('user has not searched for any city', () => {
 
