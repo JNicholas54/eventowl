@@ -32,7 +32,6 @@ describe('<App /> integration', () => { //full scope (integration testing)
         AppWrapper.unmount();
       }
     });
-    
 
     test('App passes "events" state as a prop to EventList', () => {
         const AppWrapper = mount(<App />);
@@ -51,6 +50,7 @@ describe('<App /> integration', () => { //full scope (integration testing)
       });
       
       test("get list of events matching the city selected by the user", async () => {
+        const AppWrapper = mount(<App />);
         const CitySearchWrapper = AppWrapper.find(CitySearch);
         const locations = extractLocations(mockData);
         CitySearchWrapper.setState({ suggestions: locations });
