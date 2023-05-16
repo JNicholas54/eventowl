@@ -1,6 +1,6 @@
-Feature: Specify Number Of events
+Feature 3: Specify Number Of events
 
-Scenario: When user hasn’t specified a number, 32 is the default number 
+Scenario 1: When user hasn’t specified a number, 32 is the default number 
 Given the user has not specified the number of events they want to see per city 
 When the user receives the list of events in that city 
 Then a number of 32 events should be displayed by default
